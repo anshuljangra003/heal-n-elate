@@ -34,7 +34,7 @@ function Healings() {
             positive changes in the lives of many individuals, for which we are truly humbled.
           </p>
 
-          <p>
+          <div>
             We aspire to have co-founded Heal N Elate to:
             <ul className="list-disc list-inside mt-4 space-y-2">
               <li>Act as catalysts for healing and</li>
@@ -43,7 +43,7 @@ function Healings() {
                 them to lead lives filled with purpose and joy.
               </li>
             </ul>
-          </p>
+          </div>
         </div>
       </section>
     </main>

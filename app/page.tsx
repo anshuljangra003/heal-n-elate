@@ -9,16 +9,15 @@ const MainComponent = () => {
   return (
     <div className="flex flex-col md:flex-row justify-center py-10">
       <div className="flex-1 flex justify-center items-center">
-        <iframe
+      <video
           width="560"
           height="315"
-          src="https://www.youtube.com/embed/PThQT1eMEog?si=nCbDlXDbe4V7f0ol"
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen
-        ></iframe>
+          controls
+          className="rounded-lg shadow-lg"
+        >
+          <source src="/HealnElate.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
       <div className="flex-1 flex-col items-start justify-center mt-12 space-y-8 px-4 lg:px-0">
         <h1 className="text-3xl md:text-5xl font-normal text-green-900">
