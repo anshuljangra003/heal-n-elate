@@ -1,6 +1,6 @@
 import Header from '@/components/Header';
 // import { ThemeProvider } from '@/components/theme-provider';
-import { ClerkLoaded } from '@clerk/nextjs';
+// import { ClerkLoaded } from '@clerk/nextjs';
 import React from 'react'
 
 function HealingLayout({
@@ -9,7 +9,7 @@ function HealingLayout({
     children: React.ReactNode;
   }>) {
   return (
-     <ClerkLoaded>
+   
        
 
     <html lang="en">
@@ -19,7 +19,7 @@ function HealingLayout({
     
         </body>
     </html>
-  </ClerkLoaded>
+ 
   )
 }
 
