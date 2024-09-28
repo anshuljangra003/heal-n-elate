@@ -1,3 +1,4 @@
+"use client"
 import Header from '@/components/Header'; // Assuming you have a reusable Header component
 import React from 'react';
 
