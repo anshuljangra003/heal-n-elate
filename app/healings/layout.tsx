@@ -1,26 +1,22 @@
-import Header from '@/components/Header';
+import Header from "@/components/Header";
 // import { ThemeProvider } from '@/components/theme-provider';
-import { ClerkLoaded } from '@clerk/nextjs';
-import React from 'react'
+import { ClerkLoaded } from "@clerk/nextjs";
+import React from "react";
 
 function HealingLayout({
-    children,
-  }: Readonly<{
-    children: React.ReactNode;
-  }>) {
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-     <ClerkLoaded>
-       
-
-    <html lang="en">
-      <body className="min-h-screen h-screen overflow-hidden flex flex-col ">
-    
-        {children}
-    
-        </body>
-    </html>
-  </ClerkLoaded>
-  )
+    <ClerkLoaded>
+      <div lang="en">
+        <div className="min-h-screen h-screen overflow-hidden flex flex-col ">
+          {children}
+        </div>
+      </div>
+    </ClerkLoaded>
+  );
 }
 
-export default HealingLayout
+export default HealingLayout;

@@ -1,25 +1,26 @@
-"use client"
+"use client";
 import { SignedIn, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 import React from "react";
 import { Button } from "./ui/button";
 import { Moon } from "lucide-react";
-import '@fontsource/cormorant-garamond'; // Elegant font for spiritual slogan
-import '@fontsource/poppins'; // Modern font for other text
+import "@fontsource/cormorant-garamond"; // Elegant font for spiritual slogan
+import "@fontsource/poppins"; // Modern font for other text
 import Image from "next/image";
 
 function Header() {
   return (
-    <div className="sticky top-0 z-50 rounded-b-3xl shadow-xl shadow-green-500 bg-gradient-to-r from-green-200 via-green-300 to-green-400/90 backdrop-blur-lg transition duration-300 ease-in-out transform hover:shadow-2xl">
-      <div className="flex justify-between items-center p-6 border-b border-green-500">
-        
+    <div className="sticky top-0 z-50 shadow-xl  backdrop-blur-lg transition duration-300 ease-in-out transform hover:shadow-2xl">
+      <div className="flex justify-between items-center p-6 border-b">
         {/* Logo Section - Now clickable */}
         <div className="flex items-center space-x-4">
-          <Link href="/"> {/* Wrapping the image with the Link component */}
-            <img 
-              src="./logo2.png" 
-              alt="Logo" 
-              className="w-20 h-20 md:w-52 md:h-52 rounded-full shadow-lg cursor-pointer" 
+          <Link href="/">
+            {" "}
+            {/* Wrapping the image with the Link component */}
+            <img
+              src="./logo.png"
+              alt="Logo"
+              className=" w-48 h-52 cursor-pointer"
             />
           </Link>
         </div>
@@ -61,7 +62,7 @@ function Header() {
           <Link href="/healings/contact" className="navigation-link">
             Our Services
           </Link>
-       
+
           <Link href="/our-approach" className="navigation-link">
             Our Approach
           </Link>
