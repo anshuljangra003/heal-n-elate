@@ -1,3 +1,4 @@
+"use client"
 import Header from '@/components/Header'
 import HealingList from '@/components/HealingList'
 import React from 'react'
