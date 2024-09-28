@@ -61,7 +61,7 @@ function Header() {
             Our Services
           </Link>
        
-          <Link href="/healings/contact" className="navigation-link">
+          <Link href="/our-approach" className="navigation-link">
             Our Approach
           </Link>
 
