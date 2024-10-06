@@ -6,7 +6,6 @@ import { Button } from "./ui/button";
 import { Moon } from "lucide-react";
 import "@fontsource/cormorant-garamond"; // Elegant font for spiritual slogan
 import "@fontsource/poppins"; // Modern font for other text
-import Image from "next/image";
 
 function Header() {
   return (
@@ -51,31 +50,52 @@ function Header() {
       {/* Navigation Links */}
       <div className="text-green-900 px-4 md:px-8 py-2 shadow-md">
         <nav className="flex justify-center space-x-10">
-          <Link href="/" className="navigation-link hover:animate-pulse hover:text-green-700">
+          <Link
+            href="/"
+            className="navigation-link hover:animate-pulse hover:text-green-700"
+          >
             What is Energy Healing?
           </Link>
 
-          <Link href="/our-story" className="navigation-link hover:animate-pulse hover:text-green-700">
+          <Link
+            href="/our-story"
+            className="navigation-link hover:animate-pulse hover:text-green-700"
+          >
             Our Story
           </Link>
 
-          <Link href="/healings/contact" className="navigation-link hover:animate-pulse hover:text-green-700">
+          <Link
+            href="/healings/contact"
+            className="navigation-link hover:animate-pulse hover:text-green-700"
+          >
             Our Services
           </Link>
 
-          <Link href="/our-approach" className="navigation-link hover:animate-pulse hover:text-green-700">
+          <Link
+            href="/our-approach"
+            className="navigation-link hover:animate-pulse hover:text-green-700"
+          >
             Our Approach
           </Link>
 
-          <Link href="/healings/contact" className="navigation-link hover:animate-pulse hover:text-green-700">
+          <Link
+            href="/healings/contact"
+            className="navigation-link hover:animate-pulse hover:text-green-700"
+          >
             Credentials
           </Link>
 
-          <Link href="/healings/contact" className="navigation-link hover:animate-pulse hover:text-green-700">
+          <Link
+            href="/healings/contact"
+            className="navigation-link hover:animate-pulse hover:text-green-700"
+          >
             Testimonials
           </Link>
 
-          <Link href="/healings/contact" className="navigation-link hover:animate-pulse hover:text-green-700">
+          <Link
+            href="/healings/contact"
+            className="navigation-link hover:animate-pulse hover:text-green-700"
+          >
             Contact Us
           </Link>
         </nav>
