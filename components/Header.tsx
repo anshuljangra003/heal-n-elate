@@ -1,6 +1,7 @@
 "use client";
 import { SignedIn, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
 import { Button } from "./ui/button";
 import { Moon } from "lucide-react";
@@ -16,10 +17,12 @@ function Header() {
           <Link href="/">
             {" "}
             {/* Wrapping the image with the Link component */}
-            <img
-              src="./logo.png"
+            <Image
+              src="/logo.png"
               alt="Logo"
-              className=" w-48 h-52 cursor-pointer"
+              width={100}
+              height={100}
+              className="cursor-pointer"
             />
           </Link>
         </div>
