@@ -6,20 +6,23 @@ import { Button } from "./ui/button";
 import { Moon } from "lucide-react";
 import "@fontsource/cormorant-garamond"; // Elegant font for spiritual slogan
 import "@fontsource/poppins"; // Modern font for other text
+import Image from "next/image";
 
 function Header() {
   return (
     <div className="sticky top-0 z-50 shadow-xl  backdrop-blur-lg transition duration-300 ease-in-out transform hover:shadow-2xl">
       <div className="flex justify-between items-center p-6 border-b">
         {/* Logo Section - Now clickable */}
-        <div className="flex items-center space-x-4 ">
+        <div className="flex items-center space-x-4 px-20 ">
           <Link href="/">
             {" "}
             {/* Wrapping the image with the Link component */}
-            <img
-              src="./logo.png"
+            <Image
+              src="/logo.png"
               alt="Logo"
-              className=" w-48 h-52 cursor-pointer"
+              width={100}
+              height={100}
+              className="cursor-pointer"
             />
           </Link>
         </div>
