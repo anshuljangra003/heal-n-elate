@@ -55,11 +55,12 @@ function Component() {
       <div className="flex flex-col md:flex-row justify-center py-10">
         <div className="flex-1 flex justify-center items-center">
           <Image
+            alt={"Logo"}
             width="560"
             height="315"
             src={image}
             className="rounded-lg shadow-lg"
-            alt="placeholder"
+            
           />
         </div>
         <div className="flex-1 flex-col items-start justify-center mt-12 space-y-8 px-4 lg:px-0">
