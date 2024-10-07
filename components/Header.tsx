@@ -1,6 +1,7 @@
 "use client";
 import { SignedIn, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
 import { Button } from "./ui/button";
 import { Moon } from "lucide-react";

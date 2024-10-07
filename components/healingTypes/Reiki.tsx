@@ -1,19 +1,13 @@
 "use client";
-import Header from "@/components/Header";
 import React from "react";
 
-const ServicesTable = () => {
+function ServicesTable() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-10">
-      <h1 className="text-3xl font-bold mb-4">At Reiki Healing</h1>
-      <p className="text-lg mb-6">
-        We provide healing services for a range of conditions listed below.
-      </p>
-
+    <div className="flex flex-col items-center min-h-screen ">
       <div className="overflow-x-auto">
         <table className="min-w-full bg-white border border-gray-200 shadow-md rounded-lg">
           <thead>
-            <tr className="bg-green-500 text-white">
+            <tr className="bg-green-800 text-white">
               <th className="py-4 px-6 text-left font-semibold">
                 Lifestyle Conditions
               </th>
@@ -60,18 +54,6 @@ const ServicesTable = () => {
       </div>
     </div>
   );
-};
-
-function Reiki() {
-  return (
-    <main className="flex-1 flex-col overflow-y-scroll p-4 lg:p-7 bg-gradient-to-b from-white to-green-100">
-      <Header />
-      <div className=" flex-row">
-        <img src="./Mandala.svg" alt="" className=" w-24 h-24" />
-        <ServicesTable />
-      </div>
-    </main>
-  );
 }
 
-export default Reiki;
+export default ServicesTable;
