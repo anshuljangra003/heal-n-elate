@@ -12,11 +12,19 @@ const getComponent = (routeName: string) => {
       return <ServicesTable />;
 
     default:
+      return (
+        <div>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ad
+          laboriosam aspernatur dolore voluptatem dolorum distinctio doloribus
+          tempore repellendus repudiandae voluptatibus voluptatum expedita
+          saepe, consequatur cumque laudantium incidunt quam dolores.
+        </div>
+      );
       break;
   }
 };
 
-function Reiki() {
+function Component() {
   const pathName = usePathname();
   const routeName = pathName.split("/")[2];
   console.log(routeName);
@@ -45,4 +53,4 @@ function Reiki() {
   );
 }
 
-export default Reiki;
+export default Component;
