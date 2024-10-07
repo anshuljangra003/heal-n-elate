@@ -6,6 +6,15 @@ import ServicesTable from "@/components/healingTypes/Reiki";
 import Image from "@/node_modules/next/image";
 import { HEALING_TYPES_CONSTANTS } from "@/app/constants/healing-types-constant";
 
+type ServiceType =
+  | "reiki"
+  | "tarot_reading"
+  | "numberology"
+  | "life_coach"
+  | "switch_words"
+  | "vastu"
+  | "pranic_healing";
+
 const getComponent = (routeName: string) => {
   switch (routeName) {
     case "reiki":
@@ -26,9 +35,18 @@ const getComponent = (routeName: string) => {
 
 function Component() {
   const pathName = usePathname();
-  const routeName = pathName.split("/")[2];
-  const healingTypeKey: keyof typeof HEALING_TYPES_CONSTANTS = routeName; // This could be dynamic
-  const healingTypeDetails = HEALING_TYPES_CONSTANTS[healingTypeKey];
+  let serviceType:
+    | "reiki"
+    | "tarot_reading"
+    | "numberology"
+    | "life_coach"
+    | "switch_words"
+    | "vastu"
+    | "pranic_healing";
+  const routeName = pathName.split("/")[2] as ServiceType;
+
+  serviceType = routeName; // This could be dynamic
+  const healingTypeDetails = HEALING_TYPES_CONSTANTS[serviceType];
 
   const { image, heading } = healingTypeDetails;
   return (
@@ -41,6 +59,7 @@ function Component() {
             height="315"
             src={image}
             className="rounded-lg shadow-lg"
+            alt="placeholder"
           />
         </div>
         <div className="flex-1 flex-col items-start justify-center mt-12 space-y-8 px-4 lg:px-0">
