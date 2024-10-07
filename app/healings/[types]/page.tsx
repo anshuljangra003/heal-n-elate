@@ -27,9 +27,10 @@ const getComponent = (routeName: string) => {
 function Component() {
   const pathName = usePathname();
   const routeName = pathName.split("/")[2];
-  console.log(routeName);
+  const healingTypeKey: keyof typeof HEALING_TYPES_CONSTANTS = routeName; // This could be dynamic
+  const healingTypeDetails = HEALING_TYPES_CONSTANTS[healingTypeKey];
 
-  const { image, heading } = HEALING_TYPES_CONSTANTS[routeName];
+  const { image, heading } = healingTypeDetails;
   return (
     <main className="flex-1 flex-col overflow-y-scroll p-4 lg:p-7 bg-gradient-to-b from-white to-green-100">
       <Header />
