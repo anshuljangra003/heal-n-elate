@@ -7,7 +7,6 @@ import { Button } from "./ui/button";
 import { Moon } from "lucide-react";
 import "@fontsource/cormorant-garamond"; // Elegant font for spiritual slogan
 import "@fontsource/poppins"; // Modern font for other text
-import Image from "next/image";
 
 function Header() {
   return (
