@@ -13,7 +13,7 @@ function Header() {
     <div className="sticky top-0 z-50 shadow-xl  backdrop-blur-lg transition duration-300 ease-in-out transform hover:shadow-2xl">
       <div className="flex justify-between items-center p-6 border-b">
         {/* Logo Section - Now clickable */}
-        <div className="flex items-center space-x-4 ">
+        <div className="flex items-center space-x-4 px-20 ">
           <Link href="/">
             {" "}
             {/* Wrapping the image with the Link component */}
