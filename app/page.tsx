@@ -10,8 +10,10 @@ const MainComponent = () => {
     <div className="flex flex-col md:flex-row justify-center py-10">
       <div className="flex-1 flex justify-center items-center">
       <video
+          autoPlay={true}
+          muted
           width="560"
-          height="315"
+          height="415"
           controls
           className="rounded-lg shadow-lg"
         >
@@ -47,7 +49,7 @@ const BookNow = () => {
   return (
     <div className=" p-8 md:p-16 text-center rounded-xl m-4 md:m-16">
       <h1 className="text-3xl md:text-4xl font-bold text-green-900">
-        Embark on Yiritual Journey Today!
+        Embark on Spiritual Journey Today!
       </h1>
       <p className="text-sm md:text-lg mb-4 px-4 md:px-16 py-2 text-green-900">
         Discover diverse spiritual therapies tailored to your unique needs.
@@ -89,11 +91,11 @@ const InsightsSection = () => {
 
 export default function Home() {
   return (
-    <main className="flex-1 flex-col overflow-y-scroll p-4 lg:p-7 bg-gradient-to-b from-white to-green-100 ">
+    <main className="flex-1 flex-col overflow-y-scroll p-4 lg:p-7  ">
       <Header />
       <MainComponent />
       <BookNow />
-      <InsightsSection />
+      {/* <InsightsSection /> */}
       <Carousal />
       <Footer />
     </main>
