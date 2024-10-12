@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import Carousal from "../components/carousal/Crousal";
 import { Content } from "./constants/InsightsContent";
 import Block from "@/components/block/Block";
+import Image from "next/image";
 
 const MainComponent = () => {
   return (
@@ -99,6 +100,10 @@ export default function Home() {
         <MainComponent />
         <BookNow />
         {/* <InsightsSection /> */}
+        {/* <Image src="life-coach.png"
+        height={200}
+        width={200}
+        alt="err"/> */}
         <Carousal />
         <Footer />
       </main>
