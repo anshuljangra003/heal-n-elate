@@ -9,7 +9,7 @@ const MainComponent = () => {
   return (
     <div className="flex flex-col md:flex-row justify-center py-10">
       <div className="flex-1 flex justify-center items-center">
-      <video
+        <video
           autoPlay={true}
           muted
           width="560"
@@ -93,13 +93,15 @@ const InsightsSection = () => {
 
 export default function Home() {
   return (
-    <main className="flex-1 flex-col overflow-y-scroll p-4 lg:p-7  ">
-      <Header />
-      <MainComponent />
-      <BookNow />
-      {/* <InsightsSection /> */}
-      <Carousal />
-      <Footer />
-    </main>
+    <>
+      <main className="flex-1 flex-col overflow-y-scroll p-4 lg:p-7  ">
+        <Header />
+        <MainComponent />
+        <BookNow />
+        {/* <InsightsSection /> */}
+        <Carousal />
+        <Footer />
+      </main>
+    </>
   );
 }

@@ -28,11 +28,7 @@ function Header() {
 
         {/* Slogan (Centered) */}
         <p
-<<<<<<< HEAD
           className="text-5xl md:text-6xl font-bold tracking-wide whitespace-nowrap text-green-900 absolute left-1/2 transform -translate-x-1/2"
-=======
-          className="text-3xl md:text-4xl font-bold tracking-wide text-green-900 absolute left-1/2 transform -translate-x-1/2"
->>>>>>> 845d1c2334a0f2cc1071464961be197006bc3b85
           style={{ fontFamily: "Cormorant Garamond, serif" }}
         >
           Embrace Healing, Empower Your Journey!
@@ -59,7 +55,7 @@ function Header() {
           <Link
             href="/"
             className="navigation-link text-xl hover:animate-pulse hover:text-green-700"
-            style={{ fontFamily: 'Cormorant Garamond, serif' }}
+            style={{ fontFamily: "Cormorant Garamond, serif" }}
           >
             What is Energy Healing?
           </Link>
@@ -67,15 +63,15 @@ function Header() {
           <Link
             href="/our-story"
             className="navigation-link text-xl hover:animate-pulse hover:text-green-700"
-            style={{ fontFamily: 'Cormorant Garamond, serif' }}
+            style={{ fontFamily: "Cormorant Garamond, serif" }}
           >
             Our Story
           </Link>
 
           <Link
-            href="/healings/contact"
+            href="/#healing-types"
             className="navigation-link text-xl hover:animate-pulse hover:text-green-700"
-            style={{ fontFamily: 'Cormorant Garamond, serif' }}
+            style={{ fontFamily: "Cormorant Garamond, serif" }}
           >
             Our Services
           </Link>
@@ -83,7 +79,7 @@ function Header() {
           <Link
             href="/our-approach"
             className="navigation-link text-xl hover:animate-pulse hover:text-green-700"
-            style={{ fontFamily: 'Cormorant Garamond, serif' }}
+            style={{ fontFamily: "Cormorant Garamond, serif" }}
           >
             Our Approach
           </Link>
@@ -91,7 +87,7 @@ function Header() {
           <Link
             href="/healings/contact"
             className="navigation-link text-xl hover:animate-pulse hover:text-green-700"
-            style={{ fontFamily: 'Cormorant Garamond, serif' }}
+            style={{ fontFamily: "Cormorant Garamond, serif" }}
           >
             Credentials
           </Link>
@@ -99,7 +95,7 @@ function Header() {
           <Link
             href="/healings/contact"
             className="navigation-link text-xl hover:animate-pulse hover:text-green-700"
-            style={{ fontFamily: 'Cormorant Garamond, serif' }}
+            style={{ fontFamily: "Cormorant Garamond, serif" }}
           >
             Testimonials
           </Link>
@@ -107,7 +103,7 @@ function Header() {
           <Link
             href="/form"
             className="navigation-link text-xl hover:animate-pulse hover:text-green-700"
-            style={{ fontFamily: 'Cormorant Garamond, serif' }}
+            style={{ fontFamily: "Cormorant Garamond, serif" }}
           >
             Contact Us
           </Link>

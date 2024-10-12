@@ -9,12 +9,12 @@ export const HEALING_TYPES_CONSTANTS = {
     heading: "Tarot Reading: Discover Clarity and Insight",
     link: "/tarot_reading",
   },
-  numberology: {
+  numerology: {
     image: "/numerology.png",
     heading: "Numerology: Unlocking the Power of Numbers",
     link: "/numerology",
   },
-  life_coach: {
+  life_coaching: {
     image: "/life-coach.png",
     heading: "Life Coaching for a Balanced and Purposeful Modern Life",
     link: "/life_coaching",
@@ -35,4 +35,3 @@ export const HEALING_TYPES_CONSTANTS = {
     link: "/pranic_healing",
   },
 };
-

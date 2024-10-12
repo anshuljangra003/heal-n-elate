@@ -1,7 +1,6 @@
 import { Content } from "@/app/constants/InsightsContent";
 import Card from "./../card/Card";
 
-
 const HEALING_TYPES_CONSTANTS = {
   reiki: {
     image: "/reiki.png",
@@ -13,12 +12,12 @@ const HEALING_TYPES_CONSTANTS = {
     heading: "Tarot Reading: Discover Clarity and Insight",
     link: "/tarot_reading",
   },
-  numberology: {
+  numerology: {
     image: "/numerology.png",
     heading: "Numerology: Unlocking the Power of Numbers",
     link: "/numerology",
   },
-  life_coach: {
+  life_coaching: {
     image: "/life-coach.png",
     heading: "Life Coaching for a Balanced and Purposeful Modern Life",
     link: "/life_coaching",
@@ -41,7 +40,10 @@ const HEALING_TYPES_CONSTANTS = {
 };
 const Carousal = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-10 cursor-pointer">
+    <div
+      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-10 cursor-pointer"
+      id="healing-types"
+    >
       {Object.values(HEALING_TYPES_CONSTANTS).map((healingType, index) => (
         <Card
           key={index}
