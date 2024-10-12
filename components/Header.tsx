@@ -10,18 +10,17 @@ import "@fontsource/poppins"; // Modern font for other text
 
 function Header() {
   return (
-    <div className="sticky top-0 z-50 shadow-xl  backdrop-blur-lg transition duration-300 ease-in-out transform hover:shadow-2xl">
+    <div className="sticky top-0 z-50 shadow-xl backdrop-blur-lg transition duration-300 ease-in-out transform hover:shadow-2xl">
       <div className="flex justify-between items-center p-6 border-b">
-        {/* Logo Section - Now clickable */}
-        <div className="flex items-center space-x-4 px-20 ">
+        {/* Logo Section */}
+        <div className="flex items-center space-x-4 px-20">
           <Link href="/">
-            {" "}
             {/* Wrapping the image with the Link component */}
             <Image
               src="/logo.png"
               alt="Logo"
-              width={100}
-              height={100}
+              width={150}
+              height={150}
               className="cursor-pointer"
             />
           </Link>
@@ -29,7 +28,7 @@ function Header() {
 
         {/* Slogan (Centered) */}
         <p
-          className="text-2xl md:text-4xl font-bold tracking-wide text-green-900 flex-grow text-center "
+          className="text-5xl md:text-6xl font-bold tracking-wide whitespace-nowrap text-green-900 absolute left-1/2 transform -translate-x-1/2"
           style={{ fontFamily: "Cormorant Garamond, serif" }}
         >
           Embrace Healing, Empower Your Journey!
@@ -51,53 +50,60 @@ function Header() {
       </div>
 
       {/* Navigation Links */}
-      <div className="text-green-900 px-4 md:px-8 py-2 shadow-md">
+      <div className="text-white px-4 md:px-8 py-2 shadow-md bg-yellow-600">
         <nav className="flex justify-center space-x-10">
           <Link
             href="/"
-            className="navigation-link hover:animate-pulse hover:text-green-700"
+            className="navigation-link text-xl hover:animate-pulse hover:text-green-700"
+            style={{ fontFamily: 'Cormorant Garamond, serif' }}
           >
             What is Energy Healing?
           </Link>
 
           <Link
             href="/our-story"
-            className="navigation-link hover:animate-pulse hover:text-green-700"
+            className="navigation-link text-xl hover:animate-pulse hover:text-green-700"
+            style={{ fontFamily: 'Cormorant Garamond, serif' }}
           >
             Our Story
           </Link>
 
           <Link
             href="/healings/contact"
-            className="navigation-link hover:animate-pulse hover:text-green-700"
+            className="navigation-link text-xl hover:animate-pulse hover:text-green-700"
+            style={{ fontFamily: 'Cormorant Garamond, serif' }}
           >
             Our Services
           </Link>
 
           <Link
             href="/our-approach"
-            className="navigation-link hover:animate-pulse hover:text-green-700"
+            className="navigation-link text-xl hover:animate-pulse hover:text-green-700"
+            style={{ fontFamily: 'Cormorant Garamond, serif' }}
           >
             Our Approach
           </Link>
 
           <Link
             href="/healings/contact"
-            className="navigation-link hover:animate-pulse hover:text-green-700"
+            className="navigation-link text-xl hover:animate-pulse hover:text-green-700"
+            style={{ fontFamily: 'Cormorant Garamond, serif' }}
           >
             Credentials
           </Link>
 
           <Link
             href="/healings/contact"
-            className="navigation-link hover:animate-pulse hover:text-green-700"
+            className="navigation-link text-xl hover:animate-pulse hover:text-green-700"
+            style={{ fontFamily: 'Cormorant Garamond, serif' }}
           >
             Testimonials
           </Link>
 
           <Link
-            href="/healings/contact"
-            className="navigation-link hover:animate-pulse hover:text-green-700"
+            href="/form"
+            className="navigation-link text-xl hover:animate-pulse hover:text-green-700"
+            style={{ fontFamily: 'Cormorant Garamond, serif' }}
           >
             Contact Us
           </Link>

@@ -10,7 +10,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
   return (
     <ClerkProvider>
-    <html lang="en">
+    <html lang="en" className='!scroll-smooth'>
       
       <body>
         {/* Page transition wrapper */}

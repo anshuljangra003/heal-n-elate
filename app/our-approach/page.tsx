@@ -4,7 +4,7 @@ import React from 'react';
 
 function Healings() {
   return (
-    <main className="flex-1 flex-col overflow-y-scroll p-4 lg:p-7 bg-gradient-to-b from-white to-green-100">
+    <main className="flex-1 flex-col overflow-y-scroll p-4 lg:p-7">
       <Header />
       
       {/* Our Story Section */}

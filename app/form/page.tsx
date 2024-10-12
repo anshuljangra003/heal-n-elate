@@ -5,23 +5,27 @@ import React, { useState, ChangeEvent, FormEvent } from "react";
 
 interface FormData {
   name: string;
+  lastName: string;
   email: string;
   country: string;
   phone: string;
   howDidYouHear: string;
+  message: string;
 }
 
 function Healings() {
   const [formData, setFormData] = useState<FormData>({
     name: "",
+    lastName: "",
     email: "",
     country: "",
     phone: "",
     howDidYouHear: "",
+    message: "",
   });
 
   const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLSelectElement>
+    e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
     setFormData({
@@ -42,87 +46,64 @@ function Healings() {
 
       <div className="flex flex-col lg:flex-row justify-between items-start py-8 space-y-8 lg:space-y-0 lg:space-x-12">
         {/* Left side */}
-        <div className="w-full lg:w-1/2 text-left space-y-6 p-6 shadow-lg rounded-lg">
+        <div className="w-full lg:w-1/2 text-left space-y-6 p-6 shadow-lg rounded-lg bg-gray-50">
           <h1 className="text-5xl font-bold">Let’s Begin The Transformation</h1>
-          <br />
-          <h2 className="text-3xl font-semibold text-green-600">
-            Book Your Healings
-          </h2>
+          <h2 className="text-3xl font-semibold text-green-600">Book Your Healings</h2>
           <p className="text-gray-700 text-lg">
             <strong>Phone:</strong> +123-456-7890
           </p>
           <p className="text-gray-700 text-lg">
-            <strong>Email:</strong>
-             ajay.s@bluepearlvisions.co
+            <strong>Email:</strong> ajay.s@bluepearlvisions.co
           </p>
-          <div>
-            <div className="flex space-x-5">
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src="https://img.icons8.com/fluent/30/000000/facebook-new.png" />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src="https://img.icons8.com/fluent/30/000000/linkedin-2.png" />
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src="https://img.icons8.com/fluent/30/000000/instagram-new.png" />
-              </a>
-              <a
-                href="https://messenger.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src="https://img.icons8.com/fluent/30/000000/facebook-messenger--v2.png" />
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src="https://img.icons8.com/fluent/30/000000/twitter.png" />
-              </a>
-            </div>
+          <div className="flex space-x-5">
+            {/* Social Media Icons */}
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <img src="https://img.icons8.com/fluent/30/000000/facebook-new.png" />
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <img src="https://img.icons8.com/fluent/30/000000/linkedin-2.png" />
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <img src="https://img.icons8.com/fluent/30/000000/instagram-new.png" />
+            </a>
           </div>
         </div>
 
         {/* Right side form */}
         <div className="w-full lg:w-1/2 p-6 bg-white shadow-lg rounded-lg">
           <form onSubmit={handleSubmit} className="space-y-6">
-            <h2 className="text-2xl font-semibold text-green-600 mb-4">
-              Healing Registration Form
-            </h2>
+            <h2 className="text-2xl font-semibold text-green-600 mb-4">Healing Registration Form</h2>
 
             <div className="space-y-4">
-              <div>
-                <label className="block text-gray-700 font-semibold mb-2">
-                  Name:
-                </label>
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500"
-                  placeholder="Enter your name"
-                  required
-                />
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-gray-700 font-semibold mb-2">First Name:</label>
+                  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500"
+                    placeholder="Enter First Name"
+                    required
+                  />
+                </div>
+                <div>
+                  <label className="block text-gray-700 font-semibold mb-2">Last Name:</label>
+                  <input
+                    type="text"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleChange}
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500"
+                    placeholder="Enter Last Name"
+                    required
+                  />
+                </div>
               </div>
 
               <div>
-                <label className="block text-gray-700 font-semibold mb-2">
-                  Email:
-                </label>
+                <label className="block text-gray-700 font-semibold mb-2">Email:</label>
                 <input
                   type="email"
                   name="email"
@@ -135,9 +116,7 @@ function Healings() {
               </div>
 
               <div>
-                <label className="block text-gray-700 font-semibold mb-2">
-                  Country:
-                </label>
+                <label className="block text-gray-700 font-semibold mb-2">Country:</label>
                 <select
                   name="country"
                   value={formData.country}
@@ -145,32 +124,15 @@ function Healings() {
                   className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500"
                   required
                 >
-                  <option value="" disabled>
-                    Select your country
-                  </option>
+                  <option value="" disabled>Select your country</option>
                   <option value="United States">United States</option>
-                  <option value="Canada">Canada</option>
-                  <option value="United Kingdom">United Kingdom</option>
-                  <option value="Australia">Australia</option>
                   <option value="India">India</option>
-                  <option value="Germany">Germany</option>
-                  <option value="France">France</option>
-                  <option value="Italy">Italy</option>
-                  <option value="Japan">Japan</option>
-                  <option value="China">China</option>
-                  <option value="Brazil">Brazil</option>
-                  <option value="Mexico">Mexico</option>
-                  <option value="Thailand">Thailand</option>
-                  <option value="South Africa">South Africa</option>
-                  <option value="Russia">Russia</option>
-                  <option value="Argentina">Argentina</option>
+                  {/* Add other country options */}
                 </select>
               </div>
 
               <div>
-                <label className="block text-gray-700 font-semibold mb-2">
-                  Phone:
-                </label>
+                <label className="block text-gray-700 font-semibold mb-2">Phone:</label>
                 <input
                   type="tel"
                   name="phone"
@@ -183,9 +145,7 @@ function Healings() {
               </div>
 
               <div>
-                <label className="block text-gray-700 font-semibold mb-2">
-                  How did you hear about us?
-                </label>
+                <label className="block text-gray-700 font-semibold mb-2">How did you hear about us?</label>
                 <select
                   name="howDidYouHear"
                   value={formData.howDidYouHear}
@@ -193,14 +153,23 @@ function Healings() {
                   className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500"
                   required
                 >
-                  <option value="" disabled>
-                    Select an option
-                  </option>
+                  <option value="" disabled>Select an option</option>
                   <option value="Social Media">Social Media</option>
                   <option value="Friend">Friend</option>
                   <option value="Advertisement">Advertisement</option>
-                  <option value="Other">Other</option>
                 </select>
+              </div>
+
+              <div>
+                <label className="block text-gray-700 font-semibold mb-2">Message:</label>
+                <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-green-500"
+                  placeholder="Enter your message here"
+                  rows={5}
+                ></textarea>
               </div>
             </div>
 
