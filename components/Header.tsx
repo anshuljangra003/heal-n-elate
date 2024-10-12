@@ -28,7 +28,11 @@ function Header() {
 
         {/* Slogan (Centered) */}
         <p
+<<<<<<< HEAD
           className="text-5xl md:text-6xl font-bold tracking-wide whitespace-nowrap text-green-900 absolute left-1/2 transform -translate-x-1/2"
+=======
+          className="text-3xl md:text-4xl font-bold tracking-wide text-green-900 absolute left-1/2 transform -translate-x-1/2"
+>>>>>>> 845d1c2334a0f2cc1071464961be197006bc3b85
           style={{ fontFamily: "Cormorant Garamond, serif" }}
         >
           Embrace Healing, Empower Your Journey!
