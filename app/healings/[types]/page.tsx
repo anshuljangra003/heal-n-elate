@@ -9,8 +9,8 @@ import { HEALING_TYPES_CONSTANTS } from "@/app/constants/healing-types-constant"
 type ServiceType =
   | "reiki"
   | "tarot_reading"
-  | "numberology"
-  | "life_coach"
+  | "numerology"
+  | "life_coaching"
   | "switch_words"
   | "vastu"
   | "pranic_healing";
@@ -38,8 +38,8 @@ function Component() {
   let serviceType:
     | "reiki"
     | "tarot_reading"
-    | "numberology"
-    | "life_coach"
+    | "numerology"
+    | "life_coaching"
     | "switch_words"
     | "vastu"
     | "pranic_healing";
