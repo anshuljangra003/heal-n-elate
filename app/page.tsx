@@ -5,6 +5,7 @@ import Carousal from "../components/carousal/Crousal";
 import { Content } from "./constants/InsightsContent";
 import Block from "@/components/block/Block";
 import Image from "next/image";
+import Healer from "@/components/Healer";
 
 const MainComponent = () => {
   return (
@@ -13,35 +14,31 @@ const MainComponent = () => {
         <video
           autoPlay={true}
           muted
-          width="560"
+          width="740"
           height="415"
           controls
-          className="rounded-lg shadow-lg"
+          className="rounded-lg shadow-lg p-5"
         >
           <source src="/HealnElate.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
-      <div className="flex-1 flex-col items-start justify-center mt-12 space-y-8 px-4 lg:px-0">
+      <div className="flex-1 flex-col items-start justify-center mt-12 space-y-5 px-4 lg:px-0">
         <h1 className="text-3xl md:text-5xl font-normal text-green-900">
-          What is Energy Healing?
+        Energy Healing: Restoring Balance, Revitalizing Life
+
         </h1>
-        <p className="text-yellow-800 font-light text-base md:text-xl max-w-xl"
-         style={{ fontFamily: 'Cormorant Garamond, serif' }}
+        <p className="text-yellow-800 font-light text-lg md:text-xl max-w-xl"
+        
         >
-          Energy <b className="font-bold">healing</b> serves as a refreshing oasis amidst the demands
-          and challenges of our daily lives.
+         Energy healing serves as a refreshing oasis amidst the demands and challenges of our daily lives. 
+
           <br />
-          In a world often filled with stress and fast-paced routines, energy
-          healing offers a sanctuary for rejuvenation and balance. Just as an
-          oasis provides a respite in a desert, energy healing allows
-          individuals to reconnect with their inner selves, promoting relaxation
-          and emotional well-being.
+          In a world often filled with stress and fast-paced routines, energy healing offers a sanctuary for rejuvenation and balance. Just as an oasis provides a respite in a desert, energy healing allows individuals to reconnect with their inner selves, promoting relaxation and emotional well-being. 
+
           <br />
-          It acts as a powerful tool for restoring harmony, helping to alleviate
-          the burdens of everyday life and fostering a sense of peace and
-          clarity. Embracing energy healing can transform the way we navigate
-          our daily challenges, providing a vital source of support and renewal.
+          It acts as a powerful tool for restoring harmony, helping to alleviate the burdens of everyday life and fostering a sense of peace and clarity. Embracing energy healing can transform the way we navigate our daily challenges, providing a vital source of support and renewal. 
+
         </p>
       </div>
     </div>
@@ -98,7 +95,8 @@ export default function Home() {
       <main className="flex-1 flex-col overflow-y-scroll p-4 lg:p-7  ">
         <Header />
         <MainComponent />
-        <BookNow />
+        <Healer/>
+        {/* <BookNow /> */}
         {/* <InsightsSection /> */}
         {/* <Image src="life-coach.png"
         height={200}

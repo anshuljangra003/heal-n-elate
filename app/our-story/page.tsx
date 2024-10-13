@@ -1,7 +1,7 @@
 "use client";
 import Header from "@/components/Header";
 import React from "react";
-import Image from "next/image"; // Ensure you have 'next/image' imported
+import Image from "next/image";
 
 function Healings() {
   return (
@@ -9,47 +9,47 @@ function Healings() {
       <Header />
 
       {/* Our Story Section */}
-      <section className="max-w-7xl mx-auto my-20 px-4 lg:px-0">
-        <h2
-          className="text-4xl lg:text-5xl font-bold text-green-800 mb-12 text-center"
-          style={{ fontFamily: "Cormorant Garamond, serif" }}
-        >
-          How It All Started
-        </h2>
-
+      <section className="max-w-full mx-auto my-20 px-4 lg:px-0">
         <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between lg:space-x-12">
           {/* Left Side Image */}
-          <div className="lg:w-1/2 flex justify-center lg:justify-start mb-8 lg:mb-0">
+          <div className="w-full lg:w-1/2 flex justify-center lg:justify-start mb-8 lg:mb-0">
             <Image
-              src="/numerology.png" // Correct path if the image is in 'public'
+              src="/Our_Story.jpg" // Correct path if the image is in 'public'
               alt="Demo Healing"
-              width={500}
-              height={350}
-              className="rounded-lg shadow-xl"
+              width={750} // Adjusted width for better responsiveness
+              height={500} // Adjusted height for consistency
+              className="rounded-lg w-full h-auto"
             />
           </div>
 
           {/* Right Side Text Content */}
-          <div
-            className="lg:w-1/2 text-xl text-yellow-800 leading-relaxed lg:pl-10"
-            style={{ fontFamily: "Cormorant Garamond, serif" }}
-          >
-            <p className="text-justify">
+          <div className="w-full lg:w-1/2 text-xl text-yellow-800 leading-relaxed lg:pl-10">
+            {/* Heading */}
+            <h2
+              className="text-4xl lg:text-5xl font-bold text-green-800 mb-8 lg:mb-12 text-center lg:text-left"
+              style={{ fontFamily: "Cormorant Garamond, serif" }}
+            >
+              How It All Started
+            </h2>
+
+            {/* Paragraphs */}
+            <p className="text-justify mb-4">
               Welcome to our story—a journey crafted from personal challenges, resilience, and a shared vision to create a
               sanctuary for energy healing. Co-founded by two individuals from diverse backgrounds, our paths converged in
               the most unexpected way, united by our struggles and a deep commitment to positively impact others.
             </p>
 
-            <p className="text-justify">
+            <p className="text-justify mb-4">
               While navigating our individual challenges, we discovered the profound power of healing modalities as a
               response to life’s complexities.
             </p>
 
-            <p className="text-justify">
+            <p className="text-justify mb-4">
               Since 2016, our extensive experience in healing has allowed us to create meaningful impact and foster
               positive changes in the lives of many individuals, for which we are truly humbled.
             </p>
 
+            {/* List of Objectives */}
             <div>
               <strong>We co-founded Heal N Elate to:</strong>
               <ul className="list-disc list-inside mt-4 space-y-2">
