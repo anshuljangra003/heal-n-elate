@@ -34,22 +34,22 @@ function Approach() {
             </h2>
 
             {/* Paragraphs */}
-            <p className="text-justify mb-4">
+            <p className="text-justify mb-4 text-yellow-700">
               We understand that each individualss journey is unique, and we are committed to providing personalized energy healing services that honor and support this individuality. Our healing services are designed to cater to a diverse range of individuals, including children, students, dedicated homemakers, working professionals, and seniors.
             </p>
 
-            <p className="text-justify mb-4">
+            <p className="text-justify mb-4 text-yellow-700">
               As your healing catalyst, we provide a variety of energy healing services to support on your unique journey, grounded in compassion and a commitment in reclaiming your health and happiness.
             </p>
 
             {/* List of Support */}
-            <ul className="list-disc list-inside mb-4 space-y-2 text-justify">
+            <ul className="list-disc list-inside mb-4 space-y-2 text-justify text-yellow-700">
               <li>Support you</li>
               <li>Hear your experiences</li>
               <li>Accompany you on your journey toward wellness</li>
             </ul>
 
-            <p className="text-xl font-semibold text-justify">
+            <p className="text-xl font-semibold text-justify text-yellow-700">
               We invite you to ‘HEAL N ELATE’ yourself and embrace a life of fulfillment and joy.
             </p>
           </div>
