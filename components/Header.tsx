@@ -1,14 +1,21 @@
 "use client";
-// import { SignedIn, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 import Image from "next/image";
-import React from "react";
-import { Button } from "./ui/button";
-import { Moon } from "lucide-react";
+import React, { useState } from "react"; // Added useState for dropdown functionality
 import "@fontsource/cormorant-garamond"; // Elegant font for spiritual slogan
 import "@fontsource/poppins"; // Modern font for other text
 
 function Header() {
+  const [dropdownOpen, setDropdownOpen] = useState(false); // Dropdown state
+
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
+
+  const closeDropdown = () => {
+    setDropdownOpen(false);
+  };
+
   return (
     <div className="sticky top-0 z-50 shadow-xl backdrop-blur-lg transition duration-300 ease-in-out transform hover:shadow-2xl">
       <div className="flex flex-wrap justify-between items-center p-4 lg:p-6 border-b">
@@ -28,19 +35,18 @@ function Header() {
 
         {/* Slogan (Centered) */}
         <p
-          className=" items-center text-base sm:text-2xl md:text-4xl lg:text-5xl font-bold tracking-wide text-green-900 text-center flex-grow"
+          className="items-center text-base sm:text-2xl md:text-4xl lg:text-5xl font-bold tracking-wide text-green-900 text-center flex-grow"
           style={{ fontFamily: "Cormorant Garamond, serif", whiteSpace: "nowrap" }} // Prevent text wrap
         >
           Embrace Healing, Empower Your Journey!
         </p>
 
         {/* User Controls */}
-       
       </div>
 
       {/* Navigation Links */}
       <div className="bg-yellow-600 py-2 text-white shadow-md">
-        <nav className="flex flex-wrap justify-center space-x-4 md:space-x-10 px-2 md:px-8">
+        <nav className="flex flex-wrap justify-center space-x-4 md:space-x-10 px-2 md:px-8 relative">
           <Link
             href="/"
             className="navigation-link text-sm md:text-xl hover:animate-pulse hover:text-green-700"
@@ -57,13 +63,40 @@ function Header() {
             Our Story
           </Link>
 
-          <Link
-            href="/#healing-types"
-            className="navigation-link text-sm md:text-xl hover:animate-pulse hover:text-green-700"
-            style={{ fontFamily: "Cormorant Garamond, serif" }}
+          {/* Dropdown for Our Services */}
+          <div
+            className="relative group"
+            onMouseEnter={toggleDropdown}
+            onMouseLeave={closeDropdown}
           >
-            Our Services
-          </Link>
+            <a
+              href="#healing-types" // This will restore the scroll functionality to the "Our Services" section
+              className="navigation-link text-sm md:text-xl hover:animate-pulse hover:text-green-700"
+              style={{ fontFamily: "Cormorant Garamond, serif" }}
+            >
+              Our Services
+            </a>
+
+            {/* Dropdown Menu */}
+            {dropdownOpen && (
+              <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg py-2 z-10">
+                <Link
+                  href="/services/A"
+                  className="block px-4 py-2 text-green-900 hover:bg-green-200 transition"
+                  style={{ fontFamily: "Cormorant Garamond, serif", whiteSpace: "nowrap" }}
+                >
+                  Energy Healing Services
+                </Link>
+                <Link
+                  href="/services/B"
+                  className="block px-4 py-2 text-green-900 hover:bg-green-200 transition"
+                  style={{ fontFamily: "Cormorant Garamond, serif", whiteSpace: "nowrap" }}
+                >
+                  Other Services
+                </Link>
+              </div>
+            )}
+          </div>
 
           <Link
             href="/our-approach"

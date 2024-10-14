@@ -30,7 +30,7 @@ const MainComponent = () => {
         Energy Healing: Restoring Balance, Revitalizing Life
 
         </h1>
-        <p className="text-yellow-800 font-light text-lg md:text-xl max-w-xl"
+        <p className="text-yellow-800 font-normal text-lg md:text-xl max-w-xl"
         
         >
          Energy healing serves as a refreshing oasis amidst the demands and challenges of our daily lives. 
@@ -107,7 +107,11 @@ export default function Home() {
         height={200}
         width={200}
         alt="err"/> */}
+        <br></br>
+        <div className="flex items-center justify-around">
+
         <Carousal />
+        </div>
         <Footer />
       </main>
     </>

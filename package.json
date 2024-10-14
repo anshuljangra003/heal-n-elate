@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@clerk/nextjs": "^5.3.7",
     "@fontsource/cormorant-garamond": "^5.0.15",
     "@fontsource/poppins": "^5.0.16",
     "@hookform/resolvers": "^3.9.0",

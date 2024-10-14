@@ -3,7 +3,7 @@ import './globals.css'; // Ensure you have your global styles here
 import { ReactNode } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { usePathname } from 'next/navigation';
-import { ClerkProvider } from '@clerk/nextjs';
+
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   const pathname = usePathname(); // Get the current pathname to track page changes

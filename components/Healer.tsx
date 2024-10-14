@@ -21,13 +21,14 @@ function Healer() {
 
         {/* Middle Text Section */}
         <div className="w-full lg:w-1/3 text-center lg:text-left mb-8 lg:mb-0">
-          <h2 className="text-4xl font-light text-green-700 mb-4">
+          <h2 className="text-4xl font-bold text-green-700 mb-4">
             Energy Healing Services
           </h2>
           <p className="text-lg text-yellow-800 leading-relaxed lg:whitespace-normal whitespace-normal">
             We offer healing services using different modalities that cater to a large spectrum of ailments and issues.
+            
           </p>
-          <Carousal/>
+          
         </div>
       </div>
     </section>
