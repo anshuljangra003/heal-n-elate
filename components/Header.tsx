@@ -1,5 +1,5 @@
 "use client";
-import { SignedIn, UserButton } from "@clerk/nextjs";
+// import { SignedIn, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
@@ -21,36 +21,25 @@ function Header() {
               alt="Logo"
               width={150}
               height={150}
-              className="w-20 sm:w-28 md:w-32 lg:w-40 h-auto cursor-pointer" // Adjusted for mobile
+              className="w-20 sm:w-28 md:w-32 lg:w-40 h-auto cursor-pointer items-center" // Adjusted for mobile
             />
           </Link>
         </div>
 
         {/* Slogan (Centered) */}
         <p
-          className="text-base sm:text-2xl md:text-4xl lg:text-5xl font-bold tracking-wide text-green-900 text-center flex-grow"
+          className=" items-center text-base sm:text-2xl md:text-4xl lg:text-5xl font-bold tracking-wide text-green-900 text-center flex-grow"
           style={{ fontFamily: "Cormorant Garamond, serif", whiteSpace: "nowrap" }} // Prevent text wrap
         >
           Embrace Healing, Empower Your Journey!
         </p>
 
         {/* User Controls */}
-        <SignedIn>
-          <div className="flex items-center space-x-2 lg:space-x-5">
-            <Button
-              asChild
-              className="bg-green-100 text-green-700 hover:bg-green-200 transition ease-in-out duration-150 font-light p-2 rounded-full"
-              variant="outline"
-            >
-              <Moon className="text-green-600 hover:text-green-900" />
-            </Button>
-            <UserButton />
-          </div>
-        </SignedIn>
+       
       </div>
 
       {/* Navigation Links */}
-      <div className="bg-yellow-600 py-2 shadow-md">
+      <div className="bg-yellow-600 py-2 text-white shadow-md">
         <nav className="flex flex-wrap justify-center space-x-4 md:space-x-10 px-2 md:px-8">
           <Link
             href="/"

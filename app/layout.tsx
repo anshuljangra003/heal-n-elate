@@ -9,7 +9,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   const pathname = usePathname(); // Get the current pathname to track page changes
 
   return (
-    <ClerkProvider>
+   
     <html lang="en" className='!scroll-smooth'>
       
       <body>
@@ -26,6 +26,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         </TransitionGroup>
       </body>
     </html>
-            </ClerkProvider>
+            
   );
 }

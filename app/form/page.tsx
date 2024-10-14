@@ -41,7 +41,7 @@ function Healings() {
   };
 
   return (
-    <main className="flex-1 flex-col overflow-y-scroll p-4 lg:p-10 bg-white min-h-screen">
+    <main className="flex-1 flex-col overflow-y-scroll  bg-white min-h-screen">
       <Header />
 
       <div className="flex flex-col lg:flex-row justify-between items-start py-8 space-y-8 lg:space-y-0 lg:space-x-12">

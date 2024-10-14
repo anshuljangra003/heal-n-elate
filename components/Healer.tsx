@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import Carousal from "./carousal/Crousal";
 
 function Healer() {
   return (
@@ -26,6 +27,7 @@ function Healer() {
           <p className="text-lg text-yellow-800 leading-relaxed lg:whitespace-normal whitespace-normal">
             We offer healing services using different modalities that cater to a large spectrum of ailments and issues.
           </p>
+          <Carousal/>
         </div>
       </div>
     </section>

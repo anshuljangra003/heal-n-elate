@@ -6,6 +6,8 @@ import { Content } from "./constants/InsightsContent";
 import Block from "@/components/block/Block";
 import Image from "next/image";
 import Healer from "@/components/Healer";
+import Story from "@/components/Story";
+import Approach from "@/components/Approach";
 
 const MainComponent = () => {
   return (
@@ -17,7 +19,7 @@ const MainComponent = () => {
           width="740"
           height="415"
           controls
-          className="rounded-lg shadow-lg p-5"
+          className="rounded-lg p-5 space-x-2"
         >
           <source src="/HealnElate.mp4" type="video/mp4" />
           Your browser does not support the video tag.
@@ -92,9 +94,12 @@ const InsightsSection = () => {
 export default function Home() {
   return (
     <>
-      <main className="flex-1 flex-col overflow-y-scroll p-4 lg:p-7  ">
+      <main className="flex-1 flex-col space-x-4 overflow-y-scroll ">
         <Header />
         <MainComponent />
+        <Story />
+        <div className="shadow-sm"></div>
+        <Approach/>
         <Healer/>
         {/* <BookNow /> */}
         {/* <InsightsSection /> */}
